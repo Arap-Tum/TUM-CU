@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ :root {
+    --primary-color: #006400;
+    --hover-primary-colo: #004D00;
+    --accent-color: #FFD700;
+    --bacground-color: #ffffff;
+    --text-color:  #222222;
+    --dark-bg:#000000;
+    --heading-fonts: 'popins', sanserif;
+    --body-fonts: 'inter', sanserif;
+ }
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: cover; 
+  background-position: center; 
+  transition: background-image 1s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:  rgba(0,0,0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.overlay h1 {
+    font-size: 2rem;
+    max-width: 90%;
+    font-family: var(--heading-fonts);
+    color: var(--accent-color);
+}
+
+.cta-button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    padding:  10px 20px;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    font-family: var(--heading-fonts);
+}
+.cta-button:hover {
+    background-color: #004D00;
+}
+
+ /* Responsive text size  */
+ @media (min-width: 768px) {
+    .overlay h1 {
+        font-size: 3rem;
+    } 
+
+    .cta-button {
+        font-size: 1.2rem;
+    }
+ }

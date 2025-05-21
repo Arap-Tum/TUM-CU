@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Union</title>
+    <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- styles -->
+   <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/small-screen-header.css">
+</head>
+<body>
+    <div class="header">
+
+    </div>
+ 
+
+
+    <section class="hero">
+        <div class="overlay">
+            <h1>Welcome to Technical University of Mombasa Christian Union</h1>
+            <a href="#join" class="cta-button">Join Us</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div>
+            <img src="" alt="">
+            <div>
+                <h2>Ministries</h2> 
+                <p>
+                    Explore the various ministries dedicated to service, outreach, worship, and growth. Find your place to
+                connect and serve.
+                </p>
+
+                <a href="#">Learn More</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="media">
+
+    </section>
+
+    <script>
+        const images  = [
+            'img/prayer-bg.jpg',
+            'img/ministries.jpg',
+            'img/people-bg.jpg',
+            'img/backgroud.jpg'
+        ];
+
+        let index = 0;
+        const hero = document.querySelector('.hero');
+
+        function changeBackground() {
+            hero.style.backgroundImage = `url('${images[index]}')`;
+            index = (index + 1) % images.length;
+        }
+
+        changeBackground(); //Initial load
+        setInterval(changeBackground, 7000);   //change after every seven second 
+    </script>
+
+    <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
