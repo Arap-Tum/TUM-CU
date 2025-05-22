@@ -76,7 +76,7 @@
     grid-template-columns: repeat(1, 1fr)
  }
 
- .section-card {
+ .about-card , .library-card , .ministries-card , .leadership-card{
     max-width: 400px;
     border-radius: 12px;
     overflow: hidden;
@@ -84,24 +84,24 @@
     background-color: var(--bacground-color);
  }
 
- .section-card img {
+ .about-card img , .library-card img , .ministries-card img , .leadership-card img {
  width: 100%;
  height: auto;
  display: block;
  }
 
- .section-card .text {
+ .about-card .text , .library-card .text ,.ministries-card text , .leadership-card text {
     padding: 20px;
 
  }
 
- .section-card h2 {
+ .about-card h2 {
     margin-top: 0;
     font-size: 1.5rem;
     color: var(--primary-color);
  }
 
- .section-card p {
+ .about-card p {
     
     font-size: 1rem;
     color: var(--fade-text-color);
@@ -109,7 +109,7 @@
      
  }
 
- .section-card .cta-button {
+ .about-card .cta-button {
     margin-top: 12px;
     display: inline-block;
  }
