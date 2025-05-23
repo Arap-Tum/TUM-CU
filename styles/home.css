@@ -73,7 +73,8 @@
     gap: 20px;
     padding: 20px;
     background-color: var(--sec-bacground-color);
-    grid-template-columns: repeat(1, 1fr)
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(1, 1fr) */
  }
 
  .section-card {
@@ -114,15 +115,70 @@
     display: inline-block;
  }
 
+ /* Media section  */
+
+ .media {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 1rem;
+   padding: 1rem;
+   position: relative;
+  background: linear-gradient(to bottom right, #FFD700, #006400);
+ }
+
+ .media-card {
+   border-radius: 0 1rem 1rem 1rem;
+   overflow: hidden;
+   position: relative;
+   z-index: 2;
+ }
+
+ .media-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.media-cover {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.media-info {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  width: 100%;
+}
+
+.media-info h3 {
+  color: white;
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.media-info button {
+  background: var(--accent-color);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  color: white;
+  cursor: pointer;
+}
  /* Responsive */
  @media (min-width: 768px) {
     .overlay h1 {
         font-size: 3rem;
     } 
 
-    .second-section {
+    /* .second-section {
          grid-template-columns: repeat(3, 1fr)
-    }
+    } */
     .cta-button {
         font-size: 1.2rem;
     }
