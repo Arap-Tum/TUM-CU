@@ -8,7 +8,9 @@
     --heading-fonts: 'popins', sanserif;
     --body-fonts: 'inter', sanserif;
  }
-
+.header-learge {
+    display: none;
+}
 
 .small-screen {
     position: fixed;

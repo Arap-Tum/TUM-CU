@@ -128,12 +128,25 @@
  /* Media section  */
 
  .media {
+       background: linear-gradient(to bottom right, #FFD700, #006400);
+       padding: 10px;
+
+ }
+.media h1 {
+ font-size: 2rem;
+    max-width: 90%;
+    font-family: var(--heading-fonts);
+    color: var(--primary-color);
+}
+
+ .media-display {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
    gap: 1rem;
    padding: 1rem;
    position: relative;
-  background: linear-gradient(to bottom right, #FFD700, #006400);
+     /* background: linear-gradient(to bottom right, #FFD700, #006400); */
+
  }
 
  .media-card {

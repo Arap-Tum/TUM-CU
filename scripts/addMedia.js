@@ -1,7 +1,7 @@
 import { mediaItems } from "../data/mediaData.js";
 
 export function displayMedia() {
-    const mediaSection = document.querySelector('.media');
+    const mediaSection = document.querySelector('.media-display');
 
     mediaItems.forEach(item => {
         const card = document.createElement('div');

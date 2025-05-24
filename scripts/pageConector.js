@@ -7,6 +7,7 @@ export function  connectSections() {
     .then(data => {
        document.querySelector('.header').innerHTML = data;
        openCloseSidebar()
+       console.log(document.querySelector('.header-learge'))
     })
     .catch(error => {
         console.log(error)
