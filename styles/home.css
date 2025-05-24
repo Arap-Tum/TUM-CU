@@ -1,11 +1,3 @@
-
-/*
- -----------------------------------------------
- This stylesheet is used to style the home page only 
- 
- -----------------------------------------------
- */
-
 *{
     margin: 0;
     padding: 0;
@@ -82,34 +74,25 @@
     padding: 20px;
     background-color: var(--sec-bacground-color);
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
+    /* grid-template-columns: repeat(1, 1fr) */
  }
 
  .section-card {
     max-width: 400px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: rgba(0,0,0, 1.9);
     background-color: var(--bacground-color);
-    display: flex;
-    
-    flex-direction: column;
  }
 
- .section-card img  {
+ .section-card img {
  width: 100%;
- height: 200px;
- object-fit: cover;
- 
+ height: auto;
  display: block;
  }
 
-.section-card .text  {
-   display: flex;
-   gap: 10px;
-   flex-direction: column;
-   flex: 1;
-    padding: 1rem;
+ .section-card .text {
+    padding: 20px;
 
  }
 
@@ -127,34 +110,20 @@
      
  }
 
- .section-card.cta-button  {
-    /* margin-top: 12px; */
-    /* display: inline-block; */
-   align-items: center;
+ .section-card .cta-button {
+    margin-top: 12px;
+    display: inline-block;
  }
 
  /* Media section  */
 
  .media {
-       background: linear-gradient(to bottom right, #FFD700, #006400);
-       padding: 10px;
-
- }
-.media h1 {
- font-size: 2rem;
-    max-width: 90%;
-    font-family: var(--heading-fonts);
-    color: var(--primary-color);
-}
-
- .media-display {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
    gap: 1rem;
    padding: 1rem;
    position: relative;
-     /* background: linear-gradient(to bottom right, #FFD700, #006400); */
-
+  background: linear-gradient(to bottom right, #FFD700, #006400);
  }
 
  .media-card {
