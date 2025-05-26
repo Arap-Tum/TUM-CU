@@ -3,7 +3,7 @@ import { newsletterValidation } from "./footer.js";
 
 // connect pages 
 export function  connectSections() {
-    fetch('./includes/header.html')
+    fetch('../includes/header.html')
     .then(res => res.text())
     .then(data => {
        document.querySelector('.header').innerHTML = data;
@@ -14,7 +14,7 @@ export function  connectSections() {
         console.log(error)
     });
 
-    fetch('./includes/footer.html')
+    fetch('../includes/footer.html')
     .then(res => res.text())
     .then(data => {
         document.querySelector('.footer').innerHTML =data

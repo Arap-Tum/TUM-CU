@@ -25,21 +25,108 @@
      }  
 
      .header-learge {
-        display: block;
-        position: fixed;
         display: flex;
+        position: fixed;
+       width: 100%;
         justify-content: space-between;
-        background-color: rgba(255, 255, 255, 0.1); /*Light white with transparency*/
-        width: 100%;
+        align-items: center;
+        padding: 15px;
+        font-family: var(--heading-fonts);
+        background-color:  rgba(0,0,0, 0.0);
+        /* background-color: rgba(255, 255, 255, 0.1); Light white with transparency */
+        transition: backdrop-filter 0.3s ease, bacground-color 0.3s ease;
+        backdrop-filter: blur(0);
         z-index: 70;
      }
 
-     .header-container {
-        display: flex;
-        flex-direction: row;
+     .header-learge:hover {
+      backdrop-filter: blur(10px);
+      background-color:  rgba(0,0,0, 0.2)
      }
 
-     .main-nav {
-        display: flex;
+     .header-learge.scrolled  {
+      backdrop-filter: blur(5px);
+      background-color:  rgba(0,0,0, 0.7);
+      /* background-color: rgba(255, 255, 255, 0.8); */
      }
+
+     .header-container {
+       flex-grow: 1;
+     }
+
+     .main-nav .nav-list {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+     }
+
+     .nav-item {
+      cursor:  pointer;
+      position: relative;
+      font-weight: 500;
+      text-transform: capitalize;
+     }
+
+     .nav-item a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      transition: color 0.3s;
+     }
+
+     .nav-item:hover, .nav-item a:hover {
+      cursor: pointer;
+      color: var(--accent-color);
+      background-color: var(--primary-color);
+      border-radius: 4px;
+
+     }
+
+     /* Drop down menu  */
+     /* Ensure drop down stays open when hovering  either the nav item or the drop down itself  */
+     .nav-item.dropdown {
+      position: relative;
+     }
+
+     .dropdown-menu {
+      cursor: pointer;
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      backdrop-filter: blur(10px);
+      background-color:  rgba(0,0,0, 0.5);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      min-width: 200px;
+      border-radius: 8px;
+      padding: 0.5rem ;
+     }
+
+     .dropdown:hover .dropdown-menu {
+      cursor: pointer;
+      display: block;
+     }
+
+     .dropdown-menu li {
+      list-style: none;
+      padding: 0.5rem 0.5rem;
+     }
+
+      .dropdown-menu li a {
+      color: #ffffff;
+      font-size: 1.1rem;
+      display: block;
+      transition: background 0.2s;
+      }
+
+      .dropdown-menu li a:hover {
+         background-color: var(--primary-color);
+        /* color: #ffffff; */
+        padding-right: 10px;
+         border-radius: 4px;
+         }
  }

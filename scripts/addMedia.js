@@ -14,7 +14,7 @@ export function displayMedia() {
         style= "background-image: url('${item.cover}')" >
         <div class="media-info">
             <h3> ${item.title} </h3>
-            <button> View </button>
+           
         </div>
         </div>
     </a>

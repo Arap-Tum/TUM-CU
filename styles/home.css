@@ -80,14 +80,17 @@
     display: grid;
     gap: 20px;
     padding: 20px;
-    background-color: var(--sec-bacground-color);
+    background-color:var(--sec-bacground-color) ;
+   padding: 40px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f0f2f5, #00640010);
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    /* grid-template-columns: repeat(1, 1fr) */
+   
  }
 
  .section-card {
     max-width: 400px;
     border-radius: 12px;
+   
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     background-color: var(--bacground-color);
@@ -105,6 +108,7 @@
 
  .section-card .text  {
    display: flex;
+   padding: 15px;
    gap: 10px;
    flex-direction: column;
    flex: 1;
