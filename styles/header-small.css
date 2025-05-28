@@ -45,7 +45,7 @@
 
 .small-screen.scrolled {
     backdrop-filter: blur(10px);
-    background-color:  rgba(0,0,0, 0.3);
+    background-color:  rgba(0,100,0, 0.7);
 
 }
 .logo img{
