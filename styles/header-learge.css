@@ -11,6 +11,7 @@
     --primary-color: #006400;
     --hover-primary-colo: #004D00;
     --accent-color: #FFD700;
+    --accent-light: #FFEA70;
     --bacground-color: #ffffff;
     --text-color:  #222222;
     --dark-bg:#000000;
@@ -32,7 +33,7 @@
         align-items: center;
         padding: 15px;
         font-family: var(--heading-fonts);
-        background-color:  rgba(0,0,0, 0.0);
+        background-color:  rgba(0,0,0, 0.1);
         /* background-color: rgba(255, 255, 255, 0.1); Light white with transparency */
         transition: backdrop-filter 0.3s ease, bacground-color 0.3s ease;
         backdrop-filter: blur(0);
@@ -45,8 +46,8 @@
      }
 
      .header-learge.scrolled  {
-      backdrop-filter: blur(5px);
-      background-color:  rgba(0,0,0, 0.7);
+      backdrop-filter: blur(10px);
+      background-color:  rgba(0,0,0, 0.4);
       /* background-color: rgba(255, 255, 255, 0.8); */
      }
 
@@ -72,7 +73,7 @@
 
      .nav-item a {
       text-decoration: none;
-      color: #ffffff;
+      color: var(--accent-light);
       font-size: 1.2rem;
       padding: 0.5rem 1rem;
       transition: color 0.3s;
@@ -117,7 +118,7 @@
      }
 
       .dropdown-menu li a {
-      color: #ffffff;
+      color: var(--accent-light);;
       font-size: 1.1rem;
       display: block;
       transition: background 0.2s;

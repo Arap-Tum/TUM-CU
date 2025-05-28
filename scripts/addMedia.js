@@ -21,7 +21,7 @@ export function displayMedia() {
 
 
  `;
- console.log(card)
+//  console.log(card)
 
         mediaSection.appendChild(card);
     })
