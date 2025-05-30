@@ -305,3 +305,41 @@
   gap: 10px;
   justify-content: flex-end;
  }
+
+ /* FLOATING CTA */
+.floating-cta {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background: linear-gradient(135deg,  #FFD700 0%, #004D00 100%);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.5) ;
+  text-decoration: none;
+  z-index: 999;
+  animation: pulse 1.5s infinite;
+  transition: background 0.3s ease;
+}
+
+.floating-cta:hover {
+ transform: translateY(-10px);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+   box-shadow: 0 0 0 3px rgba(0,100,0,0.6);
+  }
+
+    70% {
+    transform: scale(1.1);
+   box-shadow: 0 0 0 3px rgba(0,100,0,0.1);
+  }
+  100% {
+    transform: scale(1);
+   box-shadow: 0 0 0 3px rgba(0,100,0,0.1);
+  }
+}
