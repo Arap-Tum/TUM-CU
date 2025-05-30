@@ -4,7 +4,7 @@ export function scrollEfect() {
         const header = document.querySelector('.header-learge');
         const smallScreenHeader = document.querySelector('.small-screen');
 
-        console.log(smallScreenHeader)
+        // console.log(smallScreenHeader)
         if (window.scrollY > 30) {
             header.classList.add('scrolled');
             smallScreenHeader.classList.add ('scrolled');

@@ -27,9 +27,44 @@
     <section class="hero">
         <div class="overlay">
             <h1>Welcome to Technical University of Mombasa Christian Union</h1>
-            <a href="#join" class="cta-button">Join Us</a>
+            <a href="#join" id="joinUs" class="cta-button">Join Us</a>
         </div>
     </section>
+
+    <!-- Registration form -->
+      <div id="regModal" class="reg-modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Register</h3>
+            <form id="regForm">
+                <div class="form-group">
+                    <label for="noteTitle">Full Name</label>
+                    <input type="text" id="noteTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="noteTitle">Reg Number</label>
+                    <input type="text" id="noteTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="noteTitle">Course</label>
+                    <input type="text" id="noteTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="noteCategory">Ministry</label>
+                    <select id="noteCategory">
+                        <option value="Personal">No</option>
+                        <option value="Work">Ushering</option>
+                        <option value="Ideas">Creative</option>
+                        <option value="Ideas">Ushering</option>
+                        <option value="Todo">Media</option>
+                    </select>
+                </div>                
+                <div class="modal-actions">
+                    <button type="button" class=" cta-button btn-secondary" id="closeModal" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="cta-button btn-primary" id="save">Save </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <section>
         <div class="second-section">
@@ -71,6 +106,7 @@
                     <a class="cta-button" href="#">Learn More</a>
                 </div>
             </div>
+
             <!-- Leadership Card -->
              <div class="section-card">
                 <img src="img/leaders pic.jpg" alt="">
@@ -86,11 +122,14 @@
         </div>
     </section>
 
+    <!-- Media section -->
     <section class="media">
             <h1>TUMCU Media</h1>
             <div class="media-display"></div>
     </section>
+      
 
+    
     
   <!-- Footer -->
    <div class="footer"></div>
