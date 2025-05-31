@@ -24,6 +24,9 @@
      .small-screen  {
         display: none;
      }  
+     .side-bar {
+      display: none;
+     }
 
      .header-learge {
         display: flex;
@@ -33,21 +36,23 @@
         align-items: center;
         padding: 15px;
         font-family: var(--heading-fonts);
-        background-color:  rgba(0,0,0, 0.1);
+        /* background-color:  rgba(0,0,0, 0.1); */
         /* background-color: rgba(255, 255, 255, 0.1); Light white with transparency */
         transition: backdrop-filter 0.3s ease, bacground-color 0.3s ease;
         backdrop-filter: blur(0);
         z-index: 70;
      }
+     
 
      .header-learge:hover {
       backdrop-filter: blur(10px);
-      background-color:  rgba(0,100,0, 0.4)
+      /* background-color:  rgba(0,100,0, 0.4) */
      }
 
      .header-learge.scrolled  {
       backdrop-filter: blur(10px);
-      background-color:  rgba(0,100,0, 0.7);
+      background: linear-gradient(135deg, #FFD700 0%, #004D00 100%);
+      /* background-color:  rgba(0,100,0, 0.7); */
       /* background-color: rgba(255, 255, 255, 0.8); */
      }
 
@@ -72,17 +77,28 @@
      }
 
      .nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+     .nav-item a {
       text-decoration: none;
-      color: var(--accent-light);
-      font-size: 1.2rem;
+      columns: White;
+      /* color: var(--accent-light); */
+      font-size: 1.5rem;
       padding: 0.5rem 1rem;
       transition: color 0.3s;
+     }
+     .nav-link {
+      text-decoration: none;
+      columns: White;
      }
 
      .nav-item:hover, .nav-item a:hover {
       cursor: pointer;
       color: var(--accent-color);
-      background-color: var(--primary-color);
+      transform: scale(1.05);
+      /* background-color: var(--primary-color); */
       border-radius: 4px;
 
      }
@@ -100,7 +116,7 @@
       top: 100%;
       left: 0;
       backdrop-filter: blur(10px);
-      background-color:  rgba(0,0,0, 0.5);
+      background-color:  rgba(0, 100, 0, 1);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
       min-width: 200px;
       border-radius: 8px;
@@ -118,14 +134,15 @@
      }
 
       .dropdown-menu li a {
-      color: var(--accent-light);;
+      color: white;
       font-size: 1.1rem;
       display: block;
       transition: background 0.2s;
       }
 
       .dropdown-menu li a:hover {
-         background-color: var(--primary-color);
+         
+         color: var(--accent-color);
         /* color: #ffffff; */
         padding-right: 10px;
          border-radius: 4px;
