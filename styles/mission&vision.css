@@ -1,0 +1,168 @@
+
+/* This styles sheet is used to stle the mission and vison page only */
+
+:root {
+    --green: #2e7d32;
+    --yellow: #ffd700; /* changed from gold to yellow */
+    --white: #ffffff;
+    --light-bg: #f9f9f9;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    color: #333;
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--green);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 4px solid var(--yellow);
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .logo-img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;        /* ensures image stays upright */
+    transform: rotate(0deg);    /* forces it not to rotate */
+    border-radius: 5px;
+  }
+  
+  .logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--white);
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+  }
+  
+  nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    color: var(--yellow);
+  }
+  
+  /* Page Content */
+  main {
+    padding: 40px;
+  }
+  
+  .page-title {
+    text-align: center;
+    color: var(--green);
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 40px;
+  }
+  
+  /* Cards */
+  .card {
+    background-color: var(--white);
+    border-left: 6px solid var(--yellow);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    padding: 25px 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    color: var(--green);
+  }
+  
+  /* Core Values */
+  .core-values {
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin: 50px auto;
+    max-width: 800px;
+  }
+  
+  .core-values h2 {
+    color: var(--green);
+  }
+  
+  .core-values ul {
+    padding-left: 20px;
+  }
+  
+  .core-values li {
+    margin-bottom: 10px;
+  }
+  
+  .card strong {
+    color: var(--yellow);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--green);
+    color: var(--white);
+    text-align: center;
+    padding: 10px; /* smaller height */
+    margin-top: 40px;
+    border-top: 4px solid var(--yellow);
+    font-size: 0.85em;
+  }
+  
+  footer a {
+    color: var(--yellow);
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  main > p:first-of-type,
+  main > strong:first-of-type {
+    text-align: center;
+    display: block;
+    font-size: 1.2rem;
+    margin: 10px auto;
+    max-width: 800px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  main > strong:first-of-type {
+    color: #FFD700; /* Bright yellow */
+    font-weight: bold;
+  }
+  

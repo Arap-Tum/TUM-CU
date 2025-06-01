@@ -1,99 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christian Union</title>
     <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- styles -->
-   <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/small-screen-header.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/home.css">
+    <!-- <link rel="stylesheet" href="styles/side-bar.css"> -->
+     <link rel="stylesheet" href="styles/header-small.css">
+    <link rel="stylesheet" href="styles/header-learge.css">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
-<body>
-    <div class="header">
 
-    </div>
- 
+<body>
+    <div class="header"></div>
+
 
 
     <section class="hero">
         <div class="overlay">
             <h1>Welcome to Technical University of Mombasa Christian Union</h1>
-            <a href="#join" class="cta-button">Join Us</a>
+            <a href="#join" id="joinUs" class="cta-button">Join Us</a>
         </div>
     </section>
 
-    <section>
-       <div class="second-section">
-            <!-- About card -->
-            <div class="about-card">
-                <img src="img/about-.JPG" alt="picture">
-                <div class="text">
-                    <h2>About Us</h2>
-                    <p>
-                       Welcome to our Christian Union. Get to Learn more about who we are, what we believe, and how you can be part of our journey.
-                    </p>
-    
-                    <a class="cta-button" href="#">Learn More</a>
+    <!-- Registration form -->
+    <div id="regModal" class="reg-modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Register</h3>
+            <form id="regForm">
+                <div class="form-group">
+                    <label for="noteTitle">Full Name</label>
+                    <input type="text" id="noteTitle" required>
                 </div>
-            </div>
-            <!-- Library card  -->
-             <div class="library-card">
-                <img src="img/library books 1.jpg" alt="Library Books">
-                <div class="text">
-                    <h2>Library</h2>
-                    <p>
-                       Explore a wide selection of books and resources to deepen your faith and understanding ,and discover tools to support your walk with Christ.
-                    </p>
-    
-                    <a class="cta-button" href="#">Learn More</a>
+                <div class="form-group">
+                    <label for="noteTitle">Reg Number</label>
+                    <input type="text" id="noteTitle" required>
                 </div>
-            </div>
-          
-            <!-- Ministries Card  -->
-            <div class="ministries-card">
-                <img src="img/ministry.jpg" alt="ministry">
-                <div class="text">
-                    <h2>Ministries</h2>
-                    <p>
-                        Explore the various ministries dedicated to service, outreach, worship, and growth. Find your place
-                        to
-                        connect and serve.
-                    </p>
-    
-                    <a class="cta-button" href="#">Learn More</a>
+                <div class="form-group">
+                    <label for="noteTitle">Phone Number</label>
+                    <input type="text" id="noteTitle" required>
                 </div>
-            </div>
-
-            <!-- Leadership Card -->
-             <div class="leadership-card">
-                <img src="img/leaders pic.jpg" alt="leaders picture">
-                <div class="text">
-                    <h2>Leadership</h2>
-                    <p>
-                       Meet the dedicated team behind our Christian Union .Learn more about their roles and the vision they carry for our Union.
-                    </p>
-    
-                    <a class="cta-button" href="#">Learn More</a>
+                <div class="form-group">
+                    <label for="noteTitle">Course</label>
+                    <input type="text" id="noteTitle" required>
                 </div>
-            </div>
-
-            
+                <div class="form-group">
+                    <label for="noteCategory">Ministry</label>
+                    <select id="noteCategory">
+                        <option value="Personal">I don't belong to any ministry</option>
+                        <option value="Work">Ushering</option>
+                        <option value="Ideas">Creative</option>
+                        <option value="Ideas">Ushering</option>
+                        <option value="Todo">Media</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class=" cta-button btn-secondary" id="closeModal"
+                        >Cancel</button>
+                    <button type="button" class="cta-button btn-primary" id="save">Save </button>
+                </div>
+            </form>
         </div>
+    </div>
+
+    <section class="second-section">
+
+        <!-- About card -->
+        <article class="section-card">
+            <img src="img/about-.JPG" alt="">
+            <div class="text">
+                <h2>About Us </h2>
+                <p>
+                    Welcome to our Christian Union. Get to Learn more about who we are, what we believe, and how you can
+                    be
+                    part of our journey.
+                </p>
+
+                <a class="cta-button card-cta" href="#">Learn More</a>
+            </div>
+        </article>
+
+        <!-- Library card  -->
+        <article class="section-card">
+            <img src="img/library books 1.jpg" alt="">
+            <div class="text">
+                <h2>Library</h2>
+                <p>
+                    Explore a wide selection of books and resources to deepen your faith and understanding ,and discover
+                    tools to support your walk with Christ.
+                </p>
+
+                <a class="cta-button card-cta" href="#">Learn More</a>
+            </div>
+        </article>
+
+        <!-- Ministries Card  -->
+        <article class="section-card">
+            <img src="img/ministry.jpg" alt="">
+            <div class="text">
+                <h2>Ministries</h2>
+                <p>
+                    Explore the various ministries dedicated to service, outreach, worship, and growth. Find your place
+                    to
+                    connect and serve.
+                </p>
+
+                <a class="cta-button card-cta" href="#">Learn More</a>
+            </div>
+        </article>
+
+        <!-- Leadership Card -->
+        <article class="section-card">
+            <img src="img/leaders pic.jpg" alt="">
+            <div class="text">
+                <h2>Leadership</h2>
+                <p>
+                    Meet the dedicated team behind our Christian Union .Learn more about their roles and the vision they
+                    carry for our Union.
+                </p>
+
+                <a class="cta-button card-cta" href="#">Learn More</a>
+            </div>
+        </article>
+
     </section>
 
+    <!-- Media section -->
     <section class="media">
-
+        <h1>TUMCU Media</h1>
+        <div class="media-display"></div>
     </section>
+
+
+
+
+    <!-- Footer -->
+    <div class="footer"></div>
+
+    <!-- Floating CTA for bible study -->
+    <a href="#" class="floating-cta" id="bibleStudyCta">Join a bible Study Group</a>
 
     <script>
-        const images  = [
-            'img/prayer-bg.jpg',
+        const images = [
+            'img/prayer-bg .jpg',
             'img/people-bg.jpg',
-            'img/backgroud.jpg'
+            'img/backgroud.jpg',
+            'img/background-second-section.jpg'
         ];
 
         let index = 0;
@@ -106,8 +169,11 @@
 
         changeBackground(); //Initial load
         setInterval(changeBackground, 7000);   //change after every seven second 
+
+
     </script>
 
     <script type="module" src="scripts/main.js"></script>
 </body>
+
 </html>
