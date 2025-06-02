@@ -17,7 +17,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="styles/home.css">
     <!-- <link rel="stylesheet" href="styles/side-bar.css"> -->
-     <link rel="stylesheet" href="styles/header-small.css">
+    <link rel="stylesheet" href="styles/header-small.css">
     <link rel="stylesheet" href="styles/header-learge.css">
     <link rel="stylesheet" href="styles/footer.css">
 </head>
@@ -45,29 +45,32 @@
                 </div>
                 <div class="form-group">
                     <label for="noteTitle">Reg Number</label>
-                    <input type="text" id="noteTitle" required>
+                    <input type="text" id="noteTitle" placeholder="BCOM/327J/2021">
                 </div>
                 <div class="form-group">
                     <label for="noteTitle">Phone Number</label>
-                    <input type="text" id="noteTitle" required>
+                    <input type="text" id="noteTitle" placeholder="0712347556" required>
                 </div>
                 <div class="form-group">
                     <label for="noteTitle">Course</label>
-                    <input type="text" id="noteTitle" required>
+                    <input type="text" id="noteTitle" placeholder="Bachelor of Information Science">
+                </div>
+                <div class="form-group">
+                    <label for="noteTitle">Place of Residence</label>
+                    <input type="text" id="noteTitle" placeholder="Hostels, Kisauni, Kaa Chonjo..... ">
                 </div>
                 <div class="form-group">
                     <label for="noteCategory">Ministry</label>
                     <select id="noteCategory">
-                        <option value="Personal">I don't belong to any ministry</option>
                         <option value="Work">Ushering</option>
                         <option value="Ideas">Creative</option>
                         <option value="Ideas">Ushering</option>
                         <option value="Todo">Media</option>
+                        <option value="Personal">I don't belong to any ministry</option>
                     </select>
                 </div>
                 <div class="modal-actions">
-                    <button type="button" class=" cta-button btn-secondary" id="closeModal"
-                        >Cancel</button>
+                    <button type="button" class=" cta-button btn-secondary" id="closeModal">Cancel</button>
                     <button type="button" class="cta-button btn-primary" id="save">Save </button>
                 </div>
             </form>
