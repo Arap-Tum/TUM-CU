@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUM-CU library</title>
+
+      <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!-- Styles -->
+     <link rel="stylesheet" href="../styles/library.css">
+     <link rel="stylesheet" href="../styles/header-small.css">
+     <link rel="stylesheet" href="../styles/header-learge.css">
+     <link rel="stylesheet" href="../styles/footer.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+        <div class="header"></div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Digital Library</h1>
+            <p>Discover thousands of books at your fingertips. Search, explore, and dive into new worlds of knowledge
+                and imagination.</p>
+
+            <div class="search-container">
+                <div class="search-box">
+                    <div style="position: relative; flex: 1; min-width: 250px;">
+                        <input type="text" class="search-input" id="searchInput"
+                     placeholder="Search books by title or author..." autocomplete="off">
+
+                    </div>
+
+                    <select class="category-filter" id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Science">Science</option>
+                        <option value="Technology">Technology</option>
+                        <option value="History">History</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Mystery">Mystery</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="main-content">
+        <div class="section-title" id="sectionTitle">
+            <h2>Featured Books</h2>
+            <p>Curated collection of amazing reads</p>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="pulse">📖 Loading amazing books...</div>
+        </div>
+
+        <div class="books-grid" id="booksGrid" style="display: none;">
+            <!-- Books will be dynamically inserted here -->
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>📭 No books found</h3>
+            <p>Try adjusting your search terms or category filter</p>
+        </div>
+    </main>
+
+    <!-- FOOTER-->
+    <div class="footer"></div>
+
+    <script type="module" src="../modules/library.js"></script>
+</body>
+
+</html>
