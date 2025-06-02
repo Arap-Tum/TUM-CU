@@ -95,6 +95,20 @@
   color: var(--accent-color);
 }
 
+/* Responsive */
+@media (min-width: 768px) {
+  .overlay h1 {
+    font-size: 3rem;
+  }
+
+  /* .second-section {
+         grid-template-columns: repeat(3, 1fr)
+    } */
+  .cta-button {
+    font-size: 1.2rem;
+  }
+}
+
 
 /* About section  */
 .second-section {
@@ -266,19 +280,7 @@
   cursor: pointer;
 }
 
-/* Responsive */
-@media (min-width: 768px) {
-  .overlay h1 {
-    font-size: 3rem;
-  }
 
-  /* .second-section {
-         grid-template-columns: repeat(3, 1fr)
-    } */
-  .cta-button {
-    font-size: 1.2rem;
-  }
-}
 
 /* REGISTRATION FORM STYLES */
 .reg-modal {

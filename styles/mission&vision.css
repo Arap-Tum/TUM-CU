@@ -2,12 +2,31 @@
 /* This styles sheet is used to stle the mission and vison page only */
 
 :root {
+  --primary-color: #006400;
+  --hover-primary-color: #004D00;
+  --accent-color: #FFD700;
+  --accent-light: #FFEA70;
+  --sec-bacground-color: #f0f2f5;
+  --bacground-color: #ffffff;
+  --text-color: #222222;
+  --fade-text-color: #666;
+  --dark-bg: #000000;
+  --heading-fonts: 'popins', sanserif;
+  --body-fonts: 'inter', sanserif;
+  --modal-bg: rgba(0, 100, 0, 0.4);
     --green: #2e7d32;
     --yellow: #ffd700; /* changed from gold to yellow */
     --white: #ffffff;
     --light-bg: #f9f9f9;
   }
   
+
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
   body {
     font-family: 'Segoe UI', sans-serif;
     box-sizing: border-box;
@@ -16,56 +35,65 @@
     background-color: var(--white);
     color: #333;
   }
-  
-  /* Header */
-  header {
-    background-color: var(--green);
-    color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    border-bottom: 4px solid var(--yellow);
+
+  /* HERO SECTION  */
+  /* THE HERO SECTION STYLES */
+.hero {
+  position: relative;
+  height: 62vh;
+  width: 100%;
+  background-image:url(../img/about-.JPG) ;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.overlay h2 {
+  font-size: 1.6rem;
+  max-width: 90%;
+  font-family: var(--heading-fonts);
+  color: var(--accent-color);
+}
+
+.overlay strong {
+  background-color: #f0f2f5;
+  padding: 10px 12px;
+  border-left: solid #ffd700 8px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  max-width: 90%;
+  font-family: var(--heading-fonts);
+  color: var(--primary-color);
+
+}
+
+@media  (min-width:780px) {
+  .overlay h2 {
+    font-size: 2.5rem;
+   
+
   }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  .overlay strong {
+    font-size: 2rem;
   }
-  
-  .logo-img {
-    height: 50px;
-    width: 50px;
-    object-fit: contain;        /* ensures image stays upright */
-    transform: rotate(0deg);    /* forces it not to rotate */
-    border-radius: 5px;
-  }
-  
-  .logo-text {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--white);
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 25px;
-  }
-  
-  nav a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  nav a:hover,
-  nav a.active {
-    color: var(--yellow);
-  }
+}
+
   
   /* Page Content */
   main {
@@ -93,7 +121,7 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
     padding: 25px 30px;
     margin: 30px auto;
-    max-width: 800px;
+    max-width: 750px;
     transition: transform 0.2s ease;
   }
   
