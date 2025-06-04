@@ -1,5 +1,6 @@
 import { mediaItems } from "../data/mediaData.js";
 
+// Add MEDIA 
 export function displayMedia() {
     const mediaSection = document.querySelector('.media-display');
 
