@@ -10,7 +10,7 @@ export const ministries = [
             "Community outreach",
             "Leadership development"
         ],
-        leaderPhone: "",
+        leaderPhone: "", //add phone
         leaderName: "Ministry Leader"
     },
     {
@@ -23,7 +23,7 @@ export const ministries = [
             "Choir coordination",
             "Song selection"
         ],
-        leaderPhone: "+25471",
+        leaderPhone: "+25471", //add phone
         leaderName: "Worship Leader"
     },
     {
@@ -38,7 +38,7 @@ export const ministries = [
             "Spiritual counseling",
             " prayer chains"
         ],
-        leaderPhone: "+2547",
+        leaderPhone: "+2547",//add phone
         leaderName: "Intercessory Leader"
     },
     {
@@ -53,7 +53,24 @@ export const ministries = [
             "Homeless ministry",
             "Prison Ministry"
         ],
+        leaderPhone: "+2547", //add phone
+        leaderName: "Ministry Leader"
+    },
+    {
+        id: 5,
+        name: "Media",
+        description: "",
+        image: "", 
+        responsibilities: [
+            "Projection",
+            // Add more responsibilities
+            
+        ],
         leaderPhone: "+2547",
         leaderName: "Ministry Leader"
     }
+
+    // Add al the other ministries here
+    // DO NOT ADD IMAGES 
 ];
+
