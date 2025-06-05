@@ -32,15 +32,60 @@
     <section class="hero">
       <div class="overlay"></div>
       <div class="hero-content">
-        <h1> </h1>
-        <p class="subtitle">
-        </p>   
-        <a href="#join" id="joinUs" class="cta-button">Join</a>
-      </div>   
+        <div class="hero-content">
+            <h1> </h1>
+            <p class="subtitle">
+    
+            </p>
+            <a href="#join" id="joinMinistry" class="cta-button join">Join a MInistry</a>
+        </div>  
     </section>
 
     <!-- Main -->
-    <main></main>
+    <main>
+        <div class="eteams-grid" id="eteamsGrid">
+            <!-- Eteams will be desplayed here dynamically -->
+        </div>
+    </main>
+
+
+<!-- join ministry MOdal -->
+     <div id="regModal" class="reg-modal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Choose Ministry</h3>
+            <form id="regForm">
+                <div class="form-group">
+                    <label for="noteTitle">Full Name</label>
+                    <input type="text" id="noteTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="noteTitle">Phone Number</label>
+                    <input type="text" id="noteTitle" placeholder="0712347556" required>
+                </div>
+                <div class="form-group">
+                    <label for="noteTitle">Course</label>
+                    <input type="text" id="noteTitle" placeholder="Bachelor of Information Science">
+                </div>
+                
+                <div class="form-group">
+                    <label for="noteCategory">Which amazing ministry would you love to be part of?</label>
+                    <select id="noteCategory">
+                        <option value="">-- Select E team --</option>
+                         <option value="Todo">Noret Soret e-team</option>
+                         <option value="Todo">Net E-tem</option>
+                         
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class=" cta-button btn-secondary" id="closeModal">Cancel</button>
+                    <button type="button" class="cta-button btn-primary" id="save">Save </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating CTA for bible study -->
+    <a href="#" class="floating-cta join" id="">Yes, I want to serve! </a>
 
     <!-- FOOTER-->
     <div class="footer"></div>

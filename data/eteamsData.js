@@ -1,4 +1,4 @@
-const eteams = [
+export const eteams = [
     {
         id: 1,
         name: "Noret Soret",
