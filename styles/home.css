@@ -5,7 +5,6 @@
  -----------------------------------------------
  */
 
-
 * {
   margin: 0;
   padding: 0;
@@ -14,16 +13,16 @@
 
 :root {
   --primary-color: #006400;
-  --hover-primary-colo: #004D00;
-  --accent-color: #FFD700;
-  --accent-light: #FFEA70;
+  --hover-primary-colo: #004d00;
+  --accent-color: #ffd700;
+  --accent-light: #ffea70;
   --sec-bacground-color: #f0f2f5;
   --bacground-color: #ffffff;
   --text-color: #222222;
   --fade-text-color: #666;
   --dark-bg: #000000;
-  --heading-fonts: 'popins', sanserif;
-  --body-fonts: 'inter', sanserif;
+  --heading-fonts: "popins", sanserif;
+  --body-fonts: "inter", sanserif;
   --modal-bg: rgba(0, 100, 0, 0.4);
 }
 
@@ -45,14 +44,17 @@
 }
 
 .cta-button:hover {
-  background: linear-gradient(45deg, var(--hover-primary-colo), var(--accent-light));
+  background: linear-gradient(
+    45deg,
+    var(--hover-primary-colo),
+    var(--accent-light)
+  );
   transform: scale(1.05);
 }
 
 .btn-secondary {
   background: linear-gradient(135deg, #f0f2f5, #e6ebef, #dce1e7);
   color: #333;
-
 }
 
 .btn-secondary:hover {
@@ -60,12 +62,11 @@
   transform: scale(1.02);
 }
 
-@media screen and (min-width:750px){
+@media screen and (min-width: 750px) {
   .cta-button {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
-
 
 /* THE HERO SECTION STYLES */
 .hero {
@@ -90,7 +91,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-
 }
 
 .overlay h1 {
@@ -107,7 +107,6 @@
   }
 }
 
-
 /* About section  */
 .second-section {
   display: grid;
@@ -117,7 +116,6 @@
   padding: 40px 20px;
   background: linear-gradient(to bottom, #ffffff, #f0f2f5, #00640010);
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
 }
 
 .section-card {
@@ -141,7 +139,6 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
-
 }
 
 .section-card .text {
@@ -156,16 +153,13 @@
 }
 
 .section-card p {
-
   font-size: 1rem;
   color: var(--fade-text-color);
   line-height: 1.6;
   margin-bottom: 1.5rem;
-
 }
 
 @media (min-width: 768px) {
-
   .second-section {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
@@ -186,15 +180,14 @@
     width: 50%;
   }
   .section-card h2 {
-  font-size: 1.7rem
+    font-size: 1.7rem;
   }
 }
 
 /* Media section  */
 .media {
-  background: linear-gradient(to bottom right, #FFD700, #006400);
+  background: linear-gradient(to bottom right, #ffd700, #006400);
   padding: 10px;
-
 }
 
 .media h1 {
@@ -210,7 +203,7 @@
   gap: 1rem;
   padding: 1rem;
   position: relative;
-  background: linear-gradient(to bottom right, #FFD700, #006400);
+  background: linear-gradient(to bottom right, #ffd700, #006400);
 }
 
 .media-card {
@@ -257,8 +250,6 @@
   color: white;
   cursor: pointer;
 }
-
-
 
 /* REGISTRATION FORM STYLES */
 .reg-modal {
@@ -341,7 +332,7 @@
   position: fixed;
   bottom: 70px;
   right: 20px;
-  background: linear-gradient(135deg, #FFD700 0%, #004D00 100%);
+  background: linear-gradient(135deg, #ffd700 0%, #004d00 100%);
   color: white;
   font-weight: bold;
   font-size: 16px;
