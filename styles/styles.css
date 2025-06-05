@@ -142,3 +142,117 @@ except home page
   font-size: 1.5rem;
   }
 }
+
+
+/* REGISTRATION FORM STYLES */
+.reg-modal {
+  display: none;
+  position: fixed;
+  overflow-y: auto;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 100, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--accent-light);
+  box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+
+/* FLOATING CTA */
+.floating-cta {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background: linear-gradient(135deg, #FFD700 0%, #004D00 100%);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  z-index: 999;
+  animation: pulse 1.5s infinite;
+  transition: background 0.3s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.6);
+  }
+
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
+  }
+}

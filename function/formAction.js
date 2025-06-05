@@ -1,21 +1,21 @@
-const joinUsBtn = document.getElementById('joinUs');
+const joinBtn = document.querySelectorAll('.join');
 const registrationForm = document.getElementById('regModal');
 const closeModal = document.getElementById('closeModal')
-const save = document.getElementById('save');
+// const save = document.getElementById('save');
 
 
 
 export function openCloseForm() {
-    joinUsBtn.addEventListener('click', () => {
+    joinBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
         registrationForm.style.display = 'block';
-    })
+    });
+ });
+    
+if (closeModal) {
     closeModal.addEventListener('click', () => {
-        registrationForm.style.display = 'none';
-    })
+    registrationForm.style.display = 'none';
+    });
+}
 }
 
-export function formSubmison() {
-    save.addEventListener('clik', () => {
-
-    })
-}

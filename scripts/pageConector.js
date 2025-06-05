@@ -1,5 +1,4 @@
 import { openCloseSidebar } from "./sidebar.js";
-import { newsletterValidation } from "./footer.js";
 import { scrollEfect } from "../function/scrollEffectHeader.js";
 
 // connect pages 
@@ -25,7 +24,7 @@ export function  connectSections() {
     .then(res => res.text())
     .then(data => {
         document.querySelector('.footer').innerHTML =data
-        newsletterValidation()
+        // newsletterValidation()
 
     })
 }

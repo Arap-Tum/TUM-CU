@@ -4,7 +4,14 @@
 
 import { connectSections } from "../scripts/pageConector.js";
 import { renderMInistryCards } from "../utils/renderMinistry.js";
+import { openCloseForm } from "../function/formAction.js";
+import { modalDisplayOnScroll } from "../function/scrollEffectHeader.js";
 
 // Conect the page with the header and footer
 connectSections();
+modalDisplayOnScroll();
+openCloseForm();
 renderMInistryCards();
+
+
+

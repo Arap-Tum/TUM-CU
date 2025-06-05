@@ -14,3 +14,23 @@ export function scrollEfect() {
         }
     });
 }
+
+// THIS FUNCTION DISPLAYS THE FLOATING modal ONCE THE PAGE IS SCROLED PAST THE WINDOWS 
+
+export function modalDisplayOnScroll() {
+          const floatingCta = document.querySelector('.floating-cta');
+          const heroSection = document.querySelector('.hero-content');
+
+     if (!floatingCta || !heroSection) return;
+     const heroHeight = heroSection.offsetHeight
+
+     console.log(heroHeight)
+     console.log(floatingCta)
+    window.addEventListener('scroll', ()=> {
+       if(window.scrollY > heroHeight) {
+         floatingCta.style.display = 'block'
+       } else {
+        floatingCta.style.display = 'none';
+       }
+    })
+}
