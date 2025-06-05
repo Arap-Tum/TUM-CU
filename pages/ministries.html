@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TUMCU || Ministries</title>
 
-    
-      <!-- Fonts -->
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -18,32 +19,78 @@
 
 
     <!-- Styles -->
-     <link rel="stylesheet" href="../styles/header-small.css">
-     <link rel="stylesheet" href="../styles/header-learge.css">
-     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/ministries.css">
+    <link rel="stylesheet" href="../styles/header-small.css">
+    <link rel="stylesheet" href="../styles/header-learge.css">
+    <link rel="stylesheet" href="../styles/footer.css">
 </head>
+
 <body>
-        <!-- HEADER -->
-        <div class="header"></div>
+    <!-- HEADER -->
+    <div class="header"></div>
+
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" style="background-image: url(../img/ministry.jpg);">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>Minister With Us </h1>
-            <p>Discover thousands of books at your fingertips. Search, explore, and dive into new worlds of knowledge
-                and imagination.</p>
-
-            <a href="cta"> Join ministry</a>
+            <h1> </h1>
+            <p class="subtitle">
+            </p>
+            <a href="#join" id="" class="cta-button">Join</a>
         </div>
     </section>
 
     <!-- Main -->
-    <main></main>
-        
-    <!-- FOOTER-->
-     <div class="footer"></div>
+    <main>
+        <div class="ministry-container">
+            <h1>Our Ministries</h1>
+            <div class="ministry-grid" id="ministryGrid">
+                <!-- Ministry card will be dynamically be generated  here-->
 
-     <script type="module" src=""></script>
+                <div class="ministry-card">
+                    <!-- Ministry image section -->
+                    <div class="ministry-image">
+                        <img src="${ministry.image}" alt="${ministry.name}" loading="lazy">
+                    </div>
+
+                    <!-- Ministry content section -->
+                    <div class="ministry-content">
+                        <!-- Ministry name/title -->
+                        <h2 class="ministry-name">${ministry.name}</h2>
+
+                        <!-- Ministry description -->
+                        <p class="ministry-description">${ministry.description}</p>
+
+                        <!-- Responsibilities section -->
+                        <div class="ministry-responsibilities">
+                            <h3 class="responsibilities-title">Key Responsibilities:</h3>
+                            <div class="responsibilities-tags">
+                                ${ministry.responsibilities.map(responsibility =>
+                                `<span class="responsibility-tag">${responsibility}</span>`
+                                ).join('')}
+                            </div>
+                        </div>
+
+                        <!-- Call-to-Action button for WhatsApp contact -->
+                        <a href="https://wa.me/${ministry.leaderPhone.replace(/\D/g, '')}?text=Hi, I'm interested in joining the ${ministry.name}. Could you please provide more information?"
+                            class="cta-button" target="_blank" rel="noopener noreferrer">
+                            <span class="whatsapp-icon">📱</span>
+                            Contact ${ministry.leaderName}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER-->
+    <div class="footer"></div>
+
+
+
+    <script type="module" src="../modules/ministries.js"></script>
 
 </body>
+
 </html>

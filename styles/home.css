@@ -38,9 +38,9 @@
   color: var(--bacground-color);
   text-decoration: none;
   padding: 10px 20px;
-  border-radius: 6px;
+  border-radius: 15px;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: var(--heading-fonts);
 }
 
@@ -60,6 +60,11 @@
   transform: scale(1.02);
 }
 
+@media screen and (min-width:750px){
+  .cta-button {
+  font-size: 1.5rem;
+  }
+}
 
 
 /* THE HERO SECTION STYLES */
@@ -99,13 +104,6 @@
 @media (min-width: 768px) {
   .overlay h1 {
     font-size: 3rem;
-  }
-
-  /* .second-section {
-         grid-template-columns: repeat(3, 1fr)
-    } */
-  .cta-button {
-    font-size: 1.2rem;
   }
 }
 
@@ -147,12 +145,12 @@
 }
 
 .section-card .text {
-  padding: 1.5rem;
+  padding: 1.2rem;
   color: var(--text-color);
 }
 
 .section-card h2 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
 }
@@ -187,32 +185,12 @@
     padding: 2rem;
     width: 50%;
   }
+  .section-card h2 {
+  font-size: 1.7rem
+  }
 }
 
-
-/* @media (min-width: 768px) {
-
- 
-  .section-card {
-    flex-direction: row;
-    align-items: center;
-  }
-
-  .section-card img {
-    width: 50%;
-    height: 100%;
-  }
-
-  .section-card .text {
-    width: 50%;
-    padding: 2rem;
-  }
-} */
-
-
-
 /* Media section  */
-
 .media {
   background: linear-gradient(to bottom right, #FFD700, #006400);
   padding: 10px;

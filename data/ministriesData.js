@@ -1,3 +1,3 @@
-const ministries  = [
+ export const ministries  = [
     
 ]

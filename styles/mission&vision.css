@@ -6,6 +6,7 @@
   --hover-primary-color: #004D00;
   --accent-color: #FFD700;
   --accent-light: #FFEA70;
+  --bg-light: #f8f9fa;
   --sec-bacground-color: #f0f2f5;
   --bacground-color: #ffffff;
   --text-color: #222222;
@@ -39,37 +40,79 @@
   /* HERO SECTION  */
   /* THE HERO SECTION STYLES */
 .hero {
-  position: relative;
-  height: 62vh;
-  width: 100%;
-  background-image:url(../img/about-.JPG) ;
-  background-attachment: fixed;
-  background-size: cover;
+  background-image:url(../img/about-.JPG);
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  padding: 80px 20px;
+  text-align: center;
+  overflow: hidden;
+  /* height: 62vh; */
+  width: 100%;
   transition: background-image 1s ease-in-out;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+   right: 0;
+   bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="books" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="none"/><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23books)"/></svg>');
+    opacity: 0.3;
 }
 
 .overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* adjust 0.3 to 0.7 for desired darkness */
+  z-index: 1;
+} 
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
 }
+
+.hero-content h1 {
+  color: var(--accent-color);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+}
+.hero-content p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: 40px;
+            opacity: 0;
+            color: var(--bg-light);
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+
+/* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
 
 .overlay h2 {
   font-size: 1.6rem;
   max-width: 90%;
   font-family: var(--heading-fonts);
   color: var(--accent-color);
-}
+} 
 
 .overlay strong {
   background-color: #f0f2f5;

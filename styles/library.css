@@ -29,12 +29,7 @@
         }
          
         
-           .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* adjust 0.3 to 0.7 for desired darkness */
-  z-index: 1;
-} 
+          
         
 
         /* Hero Section */
@@ -54,7 +49,7 @@
 
 
 
-        .hero::before {
+      .hero::before {
             content: '';
             position: absolute;
             top: 0;
@@ -65,7 +60,12 @@
             opacity: 0.3;
         }
 
-       
+ .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* adjust 0.3 to 0.7 for desired darkness */
+  z-index: 1;
+} 
 
         .hero-content {
             position: relative;
