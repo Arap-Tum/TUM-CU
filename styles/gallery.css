@@ -1,7 +1,4 @@
-/* ---------------------------------------------
-THIS STYLEs IS FOR THE GALLERY PAGE 
---------------------------------------------- */
-
+/* --------------------------------------------- THIS STYLE IS FOR THE GALLERY PAGE  --------------------------------------------- */
 /* CSS Variables for consistent color scheme */
 :root {
   --primary-color: #006400;
@@ -23,16 +20,18 @@ body {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   min-height: 100vh;
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 /* Main container for ministry cards */
-.container {
+.main-container {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.container h1 {
+.main-container h1 {
   text-align: center;
   margin-bottom: 3rem;
   color: var(--primary-color);
@@ -47,6 +46,7 @@ body {
   gap: 0.5rem; /* was 1rem */
   padding: 0.5rem;
 }
+
 .media-card {
   border-radius: 0 1rem 1rem 1rem;
   overflow: hidden;
@@ -84,4 +84,11 @@ body {
   color: white;
   margin: 0 0 0.5rem;
   font-size: 1.1rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
 }
