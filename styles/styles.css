@@ -4,36 +4,35 @@ THIS IS COMMONN STYLE FOR ALL THE PAGES
 except home page 
 ------------------------------------------*/
 
-
-  * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: var(--white);
-    color: #333;
-  }
+body {
+  font-family: "Segoe UI", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  color: #333;
+}
 
 :root {
-            --primary-color: #006400;
-            --hover-primary-color: #004D00;
-            --accent-color: #FFD700;
-            --accent-light: #FFEA70;
-            --text-dark: #2c2c2c;
-            --text-light: #666;
-            --bg-light: #f8f9fa;
-            --white: #ffffff;
-            --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
-            --border-radius: 12px;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+  --primary-color: #006400;
+  --hover-primary-color: #004d00;
+  --accent-color: #ffd700;
+  --accent-light: #ffea70;
+  --text-dark: #2c2c2c;
+  --text-light: #666;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --border-radius: 12px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 .hero {
   background-position: center;
   background-size: cover;
@@ -49,14 +48,14 @@ except home page
 }
 
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-   right: 0;
-   bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="books" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="none"/><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23books)"/></svg>');
-    opacity: 0.3;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="books" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="none"/><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23books)"/></svg>');
+  opacity: 0.3;
 }
 
 .overlay {
@@ -64,7 +63,7 @@ except home page
   inset: 0;
   background: rgba(0, 0, 0, 0.5); /* adjust 0.3 to 0.7 for desired darkness */
   z-index: 1;
-} 
+}
 
 .hero-content {
   position: relative;
@@ -81,25 +80,24 @@ except home page
   animation: fadeInUp 1s ease forwards;
 }
 .hero-content p {
-            font-size: clamp(1.1rem, 2vw, 1.3rem);
-            margin-bottom: 40px;
-            opacity: 0;
-            color: var(--bg-light);
-            animation: fadeInUp 1s ease 0.3s forwards;
-        }
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  margin-bottom: 40px;
+  opacity: 0;
+  color: var(--bg-light);
+  animation: fadeInUp 1s ease 0.3s forwards;
+}
 
 /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* BUTTON STYLES  */
 
@@ -117,11 +115,15 @@ except home page
   font-weight: bold;
   font-size: 1rem;
   font-family: var(--heading-fonts);
-   box-shadow: 0 4px 16px rgba(0, 100, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 100, 0, 0.3);
 }
 
 .cta-button:hover {
-  background: linear-gradient(45deg, var(--hover-primary-colo), var(--accent-light));
+  background: linear-gradient(
+    45deg,
+    var(--hover-primary-colo),
+    var(--accent-light)
+  );
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 100, 0, 0.4);
 }
@@ -129,7 +131,6 @@ except home page
 .btn-secondary {
   background: linear-gradient(135deg, #f0f2f5, #e6ebef, #dce1e7);
   color: #333;
-
 }
 
 .btn-secondary:hover {
@@ -137,12 +138,11 @@ except home page
   transform: scale(1.02);
 }
 
-@media screen and (min-width:750px){
+@media screen and (min-width: 750px) {
   .cta-button {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
-
 
 /* REGISTRATION FORM STYLES */
 .reg-modal {
@@ -220,14 +220,13 @@ except home page
   justify-content: flex-end;
 }
 
-
 /* FLOATING CTA */
 .floating-cta {
   display: none;
   position: fixed;
   bottom: 70px;
   right: 20px;
-  background: linear-gradient(135deg, #FFD700 0%, #004D00 100%);
+  background: linear-gradient(135deg, #ffd700 0%, #004d00 100%);
   color: white;
   font-weight: bold;
   font-size: 16px;
@@ -255,4 +254,36 @@ except home page
     transform: scale(1);
     box-shadow: 0 0 0 3px rgba(0, 100, 0, 0.1);
   }
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px); /* Glassy effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.search-bar:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.search-bar:focus {
+  border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
 }
