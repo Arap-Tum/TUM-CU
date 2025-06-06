@@ -1,6 +1,6 @@
 import { mediaItems } from "../data/mediaData.js";
 
-export function renderGalleryPhotos() {
+export function renderPhotos() {
   const galleryGrid = document.getElementById("galleryGrid");
 
   galleryGrid.innerHTML = "";
@@ -21,21 +21,21 @@ export function renderGalleryPhotos() {
 }
 
 // Render videos
-// export function renderVideoItem() {
-//   const videoGrid = document.querySelector("videoGrid");
-//   videoGrid.innerHTML = "";
+export function renderVideoItem() {
+  const videoGrid = document.getElementById("videoGrid");
+  videoGrid.innerHTML = "";
 
-//   const videoItems = mediaItems.filter((item) => item.type === "video");
-//   if (videoItems.length === 0) {
-//     galleryGrid.innerHTML = `<div class="loading">No Photos available at the moment.</div>`;
-//     return;
-//   }
+  const videoItems = mediaItems.filter((item) => item.type === "video");
+  if (videoItems.length === 0) {
+    galleryGrid.innerHTML = `<div class="loading">No videos available at the moment.</div>`;
+    return;
+  }
 
-//   console.log(videoItems);
+  console.log(videoItems);
 
-//   const cardsHTML = videoItems.map((videoItem) => createCard(videoItem));
-//   videoGrid.innerHTML = cardsHTML.join("");
-// }
+  const cardsHTML = videoItems.map((videoItem) => createCard(videoItem));
+  videoGrid.innerHTML = cardsHTML.join("");
+}
 
 // HOMPAGE MEDEA ITEM
 export function renderHomeMedia() {

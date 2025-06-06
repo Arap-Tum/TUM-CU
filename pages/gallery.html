@@ -47,9 +47,23 @@
 
     <!-- Main -->
     <main>
-      <div class="main-container">
+      <div class="switch">
+        <button class="tab-button active">Photos</button>
+        <button class="tab-button">Videos</button>
+      </div>
+
+      <!-- Photos tab -->
+      <div class="main-container active">
         <h1>Phostos</h1>
         <div class="grid" id="galleryGrid">
+          <!-- Media data will be dynamically added here  -->
+        </div>
+      </div>
+
+      <!-- Video Tab -->
+      <div class="main-container">
+        <h1>Videos</h1>
+        <div class="grid" id="videoGrid">
           <!-- Media data will be dynamically added here  -->
         </div>
       </div>
