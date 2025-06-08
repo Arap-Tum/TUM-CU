@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TUMCU || Leadership</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/leadership.css" />
+    <link rel="stylesheet" href="../styles/header-small.css" />
+    <link rel="stylesheet" href="../styles/header-learge.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="header"></div>
+
+    <!-- HERO -->
+    <section class="hero" style="background-image: url(../img/leaderspic.jpg)">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>Our Leadership Team</h1>
+        <p class="subtitle">
+          Meet the dedicated leaders serving our Christian Union with passion
+          and commitment to God's calling.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <h1>Our Leaders</h1>
+
+        <div id="loadingContainer" class="loading">
+          <div class="spinner"></div>
+          Loading our amazing leaders...
+        </div>
+
+        <div class="leaders-grid" id="leadersGrid">
+          <!-- Leaders card will be dynamically be generated  here-->
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER-->
+    <div class="footer"></div>
+
+    <script type="module" src="../modules/leadership.js"></script>
+  </body>
+</html>
