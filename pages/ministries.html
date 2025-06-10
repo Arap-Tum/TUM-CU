@@ -1,114 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TUMCU || Ministries</title>
 
-
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="stylesheet" href="../styles/ministries.css">
-    <link rel="stylesheet" href="../styles/header-small.css">
-    <link rel="stylesheet" href="../styles/header-learge.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-</head>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/ministries.css" />
+    <link rel="stylesheet" href="../styles/header-small.css" />
+    <link rel="stylesheet" href="../styles/header-learge.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+  </head>
 
-<body>
+  <body>
     <!-- HEADER -->
     <div class="header"></div>
 
     <!-- HERO -->
-    <section class="hero" style="background-image: url(../img/ministry.jpg);">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1> Serve with Purpose</h1>
-            <p class="subtitle">Discover your calling and make an impact through our vibrant ministries. 
-        There's a place for you here.
-    
-            </p>
-            <a href="#join" id="joinMinistry" class="cta-button join">Join a MInistry</a>
-        </div>
+    <section
+      class="hero"
+      style="background-image: url(https://i.ibb.co/Q7hprSNZ/ministries.jpg)"
+    >
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>Serve with Purpose</h1>
+        <p class="subtitle">
+          Discover your calling and make an impact through our vibrant
+          ministries. There's a place for you here.
+        </p>
+        <a href="#join" id="joinMinistry" class="cta-button join"
+          >Join a MInistry</a
+        >
+      </div>
     </section>
 
     <!-- Main -->
     <main>
-        <div class="ministry-container">
-            <h1>Our Ministries</h1>
-            <div class="ministry-grid" id="ministryGrid">
-                <!-- Ministry card will be dynamically be generated  here-->               
-            </div>
+      <div class="ministry-container">
+        <h1>Our Ministries</h1>
+        <div class="ministry-grid" id="ministryGrid">
+          <!-- Ministry card will be dynamically be generated  here-->
         </div>
+      </div>
     </main>
 
     <!-- join ministry MOdal -->
-     <div id="regModal" class="reg-modal">
-        <div class="modal-content">
-            <h3 id="modalTitle">Choose Ministry</h3>
-            <form id="regForm">
-                <div class="form-group">
-                    <label for="noteTitle">Full Name</label>
-                    <input type="text" id="noteTitle" required>
-                </div>
-                <div class="form-group">
-                    <label for="noteTitle">Phone Number</label>
-                    <input type="text" id="noteTitle" placeholder="0712347556" required>
-                </div>
-                <div class="form-group">
-                    <label for="noteTitle">Course</label>
-                    <input type="text" id="noteTitle" placeholder="Bachelor of Information Science">
-                </div>
-                
-                <div class="form-group">
-                    <label for="noteCategory">Which amazing ministry would you love to be part of?</label>
-                    <select id="noteCategory">
-                        <option value="">-- Select a Ministry --</option>
-                         <option value="Todo">Intecessory</option>
-                         <option value="Todo">Praise and Worship</option>
-                         <option value="Todo">Instrumentalist</option>
-                         <option value="Work">Ushering</option>
-                         <option value="Work">Catering</option>
-                         <option value="Todo">Hospital</option>
-                         <option value="Todo">High school</option>
-                         <option value="Todo">Media</option>
-                         <option value="Ideas">Creative</option>
-                         <option value="Ideas">Technician</option>
-                         
-                    </select>
-                </div>
-                <div class="modal-actions">
-                    <button type="button" class=" cta-button btn-secondary" id="closeModal">Cancel</button>
-                    <button type="button" class="cta-button btn-primary" id="save">Save </button>
-                </div>
-            </form>
-        </div>
+    <div id="regModal" class="reg-modal">
+      <div class="modal-content">
+        <h3 id="modalTitle">Choose Ministry</h3>
+        <form id="regForm">
+          <div class="form-group">
+            <label for="noteTitle">Full Name</label>
+            <input type="text" id="noteTitle" required />
+          </div>
+          <div class="form-group">
+            <label for="noteTitle">Phone Number</label>
+            <input
+              type="text"
+              id="noteTitle"
+              placeholder="0712347556"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="noteTitle">Course</label>
+            <input
+              type="text"
+              id="noteTitle"
+              placeholder="Bachelor of Information Science"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="noteCategory"
+              >Which amazing ministry would you love to be part of?</label
+            >
+            <select id="noteCategory">
+              <option value="">-- Select a Ministry --</option>
+              <option value="Todo">Intecessory</option>
+              <option value="Todo">Praise and Worship</option>
+              <option value="Todo">Instrumentalist</option>
+              <option value="Work">Ushering</option>
+              <option value="Work">Catering</option>
+              <option value="Todo">Hospital</option>
+              <option value="Todo">High school</option>
+              <option value="Todo">Media</option>
+              <option value="Ideas">Creative</option>
+              <option value="Ideas">Technician</option>
+            </select>
+          </div>
+          <div class="modal-actions">
+            <button
+              type="button"
+              class="cta-button btn-secondary"
+              id="closeModal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="cta-button btn-primary" id="save">
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <!-- Floating CTA for bible study -->
     <a href="#" class="floating-cta join" id="">Yes, I want to serve! </a>
 
-
     <!-- FOOTER-->
     <div class="footer"></div>
 
-
-
-
-
     <script type="module" src="../modules/ministries.js"></script>
-
-</body>
-
+  </body>
 </html>
