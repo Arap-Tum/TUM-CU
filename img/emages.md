@@ -8,3 +8,7 @@ https://i.ibb.co/Q7hprSNZ/ministries.jpg
 https://i.ibb.co/Qj98Bd8B/ministry.jpg
 https://i.ibb.co/jvW48NsV/people-bg.jpg
 https://i.ibb.co/dJHj5HhP/prayer-bg.jpg
+
+<!-- Logo -->
+
+https://i.ibb.co/HTk9RYNB/CU-logo.png

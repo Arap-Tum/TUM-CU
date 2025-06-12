@@ -14,15 +14,6 @@
   --spacing-xl: 2rem;
 }
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  color: var(--text-dark);
-  line-height: 1.6;
-  padding: var(--spacing-xl) var(--spacing-md);
-  min-height: 100vh;
-}
-
 .leaders-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));

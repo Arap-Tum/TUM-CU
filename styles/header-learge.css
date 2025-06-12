@@ -1,5 +1,3 @@
-
-
 /*
  -----------------------------------------------
  This stylesheet is used to style the heaer for large screens only 
@@ -8,143 +6,141 @@
  */
 
 :root {
-    --primary-color: #006400;
-    --hover-primary-colo: #004D00;
-    --accent-color: #FFD700;
-    --accent-light: #FFEA70;
-    --bacground-color: #ffffff;
-    --text-color:  #222222;
-    --dark-bg:#000000;
-    --heading-fonts: 'popins', sanserif;
-    --body-fonts: 'inter', sanserif;
- }
-
- @media screen  and (min-width:750px){
-
-     .small-screen  {
-        display: none;
-     }  
-     .side-bar {
-      display: none;
-     }
-
-     .header-learge {
-        display: flex;
-        position: fixed;
-       width: 100%;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-        font-family: var(--heading-fonts);
-        /* background-color:  rgba(0,0,0, 0.1); */
-        /* background-color: rgba(255, 255, 255, 0.1); Light white with transparency */
-        transition: backdrop-filter 0.3s ease, bacground-color 0.3s ease;
-        backdrop-filter: blur(0);
-        z-index: 70;
-     }
-     
-
-     .header-learge:hover {
-      backdrop-filter: blur(10px);
-      /* background-color:  rgba(0,100,0, 0.4) */
-     }
-
-     .header-learge.scrolled  {
-      backdrop-filter: blur(10px);
-      background: linear-gradient(135deg, #FFD700 0%, #004D00 100%);
-      /* background-color:  rgba(0,100,0, 0.7); */
-      /* background-color: rgba(255, 255, 255, 0.8); */
-     }
-
-     .header-container {
-       flex-grow: 1;
-     }
-
-     .main-nav .nav-list {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-        align-items: center;
-        justify-content: flex-end;
-        margin: 0;
-     }
-
-     .nav-item {
-      cursor:  pointer;
-      position: relative;
-      font-weight: 500;
-      text-transform: capitalize;
-     }
-
-     .nav-item a {
-    color: white;
-    text-decoration: none;
+  --primary-color: #006400;
+  --hover-primary-colo: #004d00;
+  --accent-color: #ffd700;
+  --accent-light: #ffea70;
+  --bacground-color: #ffffff;
+  --text-color: #222222;
+  --dark-bg: #000000;
+  --heading-fonts: "popins", sanserif;
+  --body-fonts: "inter", sanserif;
 }
 
-     .nav-item a {
-      text-decoration: none;
-      columns: White;
-      /* color: var(--accent-light); */
-      font-size: 1.5rem;
-      padding: 0.5rem 1rem;
-      transition: color 0.3s;
-     }
-     .nav-link {
-      text-decoration: none;
-      columns: White;
-     }
+@media screen and (min-width: 750px) {
+  .small-screen {
+    display: none;
+  }
+  .side-bar {
+    display: none;
+  }
 
-     .nav-item:hover, .nav-item a:hover {
-      cursor: pointer;
-      color: var(--accent-color);
-      transform: scale(1.05);
-      /* background-color: var(--primary-color); */
-      border-radius: 4px;
+  .header-learge {
+    top: 0;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    font-family: var(--heading-fonts);
+    /* background-color:  rgba(0,0,0, 0.1); */
+    /* background-color: rgba(255, 255, 255, 0.1); Light white with transparency */
+    transition: backdrop-filter 0.3s ease, bacground-color 0.3s ease;
+    backdrop-filter: blur(0);
+    z-index: 70;
+  }
 
-     }
+  .header-learge:hover {
+    backdrop-filter: blur(10px);
+    /* background-color:  rgba(0,100,0, 0.4) */
+  }
 
-     /* Drop down menu  */
-     /* Ensure drop down stays open when hovering  either the nav item or the drop down itself  */
-     .nav-item.dropdown {
-      position: relative;
-     }
+  .header-learge.scrolled {
+    backdrop-filter: blur(10px);
+    background: linear-gradient(135deg, #ffd700 0%, #004d00 100%);
+    /* background-color:  rgba(0,100,0, 0.7); */
+    /* background-color: rgba(255, 255, 255, 0.8); */
+  }
 
-     .dropdown-menu {
-      cursor: pointer;
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      backdrop-filter: blur(10px);
-      background-color:  rgba(0, 100, 0, 1);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      min-width: 200px;
-      border-radius: 8px;
-      padding: 0.5rem ;
-     }
+  .header-container {
+    flex-grow: 1;
+  }
 
-     .dropdown:hover .dropdown-menu {
-      cursor: pointer;
-      display: block;
-     }
+  .main-nav .nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0;
+  }
 
-     .dropdown-menu li {
-      list-style: none;
-      padding: 0.5rem 0.5rem;
-     }
+  .nav-item {
+    cursor: pointer;
+    position: relative;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
 
-      .dropdown-menu li a {
-      color: white;
-      font-size: 1.1rem;
-      display: block;
-      transition: background 0.2s;
-      }
+  .nav-item a {
+    color: white;
+    text-decoration: none;
+  }
 
-      .dropdown-menu li a:hover {
-         
-         color: var(--accent-color);
-        /* color: #ffffff; */
-        padding-right: 10px;
-         border-radius: 4px;
-         }
- }
+  .nav-item a {
+    text-decoration: none;
+    columns: White;
+    /* color: var(--accent-light); */
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+  }
+  .nav-link {
+    text-decoration: none;
+    columns: White;
+  }
+
+  .nav-item:hover,
+  .nav-item a:hover {
+    cursor: pointer;
+    color: var(--accent-color);
+    transform: scale(1.05);
+    /* background-color: var(--primary-color); */
+    border-radius: 4px;
+  }
+
+  /* Drop down menu  */
+  /* Ensure drop down stays open when hovering  either the nav item or the drop down itself  */
+  .nav-item.dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 100, 0, 1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    cursor: pointer;
+    display: block;
+  }
+
+  .dropdown-menu li {
+    list-style: none;
+    padding: 0.5rem 0.5rem;
+  }
+
+  .dropdown-menu li a {
+    color: white;
+    font-size: 1.1rem;
+    display: block;
+    transition: background 0.2s;
+  }
+
+  .dropdown-menu li a:hover {
+    color: var(--accent-color);
+    /* color: #ffffff; */
+    padding-right: 10px;
+    border-radius: 4px;
+  }
+}
