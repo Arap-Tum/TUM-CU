@@ -1,19 +1,10 @@
-// import { mockLeadersData } from "../data/leadersData.js";
-
 import { fetchLeaders } from "../API/allApi.js";
-// Simulate API call with loading delay
-// async function fetchLeaders() {
-//   return new Promise((resolve) => {
-//     setTimeout(() => {
-//       resolve(mockLeadersData);
-//     }, 1500); // Simulate network delay
-//   });
-// }
 
 // Load and display leaders
 export async function loadLeaders() {
   try {
     const leaders = await fetchLeaders();
+
     console.log(leaders);
     const loadingContainer = document.getElementById("loadingContainer");
     const leadersContainer = document.getElementById("leadersGrid");
@@ -47,7 +38,7 @@ export async function loadLeaders() {
 function createLeaderCard(leader) {
   return `
                 <div class="leader-card">
-                    <img src="${leader.photo}" alt="${leader.name}" class="leader-photo" onerror="this.src='https://via.placeholder.com/300x450/006400/ffffff?text=Photo'">
+                    <img src="${leader.cover}" alt="${leader.name}" class="leader-photo" onerror="this.src='https://via.placeholder.com/300x450/006400/ffffff?text=Photo'">
                     <div class="leader-info">
                         <h3 class="leader-name">${leader.name}</h3>
                         <div class="leader-position">${leader.position}</div>
