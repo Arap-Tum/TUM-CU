@@ -1,88 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TUMCU || Gallery</title>
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUMCU || Gallery</title>
 
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="../styles/gallery.css" />
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/header-small.css" />
-    <link rel="stylesheet" href="../styles/header-learge.css" />
-    <link rel="stylesheet" href="../styles/footer.css" />
-  </head>
-  <body>
-    <!-- HEADER -->
-    <div class="header"></div>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Explore photos and videos</h1>
-        <p class="subtitle">
-          created by and for our Christian Union — a visual record of lives
-          touched, service rendered, and Christ glorified in every event.
-        </p>
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/gallery.css" />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/header-small.css" />
+  <link rel="stylesheet" href="../styles/header-learge.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+</head>
 
-        <input
-          class="search-bar"
-          type="text"
-          id="gallery-search"
-          placeholder="Search gallery..."
-          title="Search gallery"
-          form=""
-        />
+<body>
+  <!-- HEADER -->
+  <div class="header"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Explore photos and videos</h1>
+      <p class="subtitle">
+        created by and for our Christian Union — a visual record of lives
+        touched, service rendered, and Christ glorified in every event.
+      </p>
+
+      <input class="search-bar" type="text" id="gallerySearch" placeholder="Search gallery..." title="Search gallery"
+        form="" />
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main>
+    <div class="switch">
+      <button class="tab-button active">Photos</button>
+      <button class="tab-button">Videos</button>
+    </div>
+
+    <!-- Photos tab -->
+    <div class="main-container active">
+      <h1>Phostos</h1>
+      <div class="grid" id="galleryGrid">
+        <!-- Media data will be dynamically added here  -->
       </div>
-    </section>
+    </div>
 
-    <!-- Main -->
-    <main>
-      <div class="switch">
-        <button class="tab-button active">Photos</button>
-        <button class="tab-button">Videos</button>
+    <!-- Video Tab -->
+    <div class="main-container">
+      <h1>Videos</h1>
+      <div class="grid" id="videoGrid">
+        <!-- Media data will be dynamically added here  -->
       </div>
+    </div>
+  </main>
 
-      <!-- Photos tab -->
-      <div class="main-container active">
-        <h1>Phostos</h1>
-        <div class="grid" id="galleryGrid">
-          <!-- Media data will be dynamically added here  -->
-        </div>
-      </div>
+  <!-- FOOTER-->
+  <div class="footer"></div>
 
-      <!-- Video Tab -->
-      <div class="main-container">
-        <h1>Videos</h1>
-        <div class="grid" id="videoGrid">
-          <!-- Media data will be dynamically added here  -->
-        </div>
-      </div>
-    </main>
+  <script type="module" src="../modules/gallery.js"></script>
+</body>
 
-    <!-- FOOTER-->
-    <div class="footer"></div>
-
-    <script type="module" src="../modules/gallery.js"></script>
-  </body>
 </html>

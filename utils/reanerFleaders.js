@@ -1,16 +1,25 @@
 import { fetchFormerLeaders } from "../API/allApi.js";
+import { setupSearch } from "../function/search.js";
 
 // Load and display leaders
 export async function loadFomerLeaders() {
   try {
     const leaders = await fetchFormerLeaders();
-    console.log(leaders);
+    // console.log(leaders);
     const loadingContainer = document.getElementById("loadingContainer");
     const leadersContainer = document.getElementById("leadersGrid");
 
     // Hide loading, show leaders
     loadingContainer.style.display = "none";
     leadersContainer.style.display = "grid";
+
+    // search functionality
+    setupSearch("searchInput", leadersContainer, leaders, createLeaderCard, [
+      "name",
+      "position",
+      "year",
+      "course",
+    ]);
 
     // Create and insert leader cards
     leadersContainer.innerHTML = leaders.map(createLeaderCard).join("");

@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TUMCU || Leadership</title>
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TUMCU || Leadership</title>
 
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/leadership.css" />
-    <link rel="stylesheet" href="../styles/header-small.css" />
-    <link rel="stylesheet" href="../styles/header-learge.css" />
-    <link rel="stylesheet" href="../styles/footer.css" />
-  </head>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <!-- HEADER -->
-    <div class="header"></div>
+  <!-- Styles -->
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="../styles/leadership.css" />
+  <link rel="stylesheet" href="../styles/header-small.css" />
+  <link rel="stylesheet" href="../styles/header-learge.css" />
+  <link rel="stylesheet" href="../styles/footer.css" />
+</head>
 
-    <!-- HERO -->
-    <section
-      class="hero"
-      style="background-image: url(https://i.ibb.co/35BqWrFn/leaderspic.jpg)"
-    >
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Our Leadership Team</h1>
-        <p class="subtitle">
-          Meet the dedicated leaders serving our Christian Union with passion
-          and commitment to God's calling.
-        </p>
+<body>
+  <!-- HEADER -->
+  <div class="header"></div>
+
+  <!-- HERO -->
+  <section class="hero" style="background-image: url(https://i.ibb.co/35BqWrFn/leaderspic.jpg)">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Our Leadership Team</h1>
+      <p class="subtitle">
+        Meet the dedicated leaders serving our Christian Union with passion
+        and commitment to God's calling.
+      </p>
+      <input class="search-bar" type="text" id="searchInput" placeholder="Search gallery..." title="Search gallery"
+        form="" />
+    </div>
+  </section>
+
+  <!-- Main -->
+  <main>
+    <div class="container">
+      <h1>Our Leaders</h1>
+
+      <div id="loadingContainer" class="loading">
+        <div class="spinner"></div>
+        Loading our amazing leaders...
       </div>
-    </section>
 
-    <!-- Main -->
-    <main>
-      <div class="container">
-        <h1>Our Leaders</h1>
-
-        <div id="loadingContainer" class="loading">
-          <div class="spinner"></div>
-          Loading our amazing leaders...
-        </div>
-
-        <div class="leaders-grid" id="leadersGrid">
-          <!-- Leaders card will be dynamically be generated  here-->
-        </div>
+      <div class="leaders-grid" id="leadersGrid">
+        <!-- Leaders card will be dynamically be generated  here-->
       </div>
-    </main>
+    </div>
+  </main>
 
-    <!-- FOOTER-->
-    <div class="footer"></div>
+  <!-- FOOTER-->
+  <div class="footer"></div>
 
-    <script type="module" src="../modules/leadership.js"></script>
-  </body>
+  <script type="module" src="../modules/leadership.js"></script>
+</body>
+
 </html>

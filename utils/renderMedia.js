@@ -1,5 +1,4 @@
-// import { mediaItems } from "../data/mediaData.js";
-
+import { setupSearch } from "../function/search.js";
 import { fetchMediaItems } from "../API/allApi.js";
 
 let mediaItems = [];
@@ -18,6 +17,10 @@ export async function renderPhotos() {
   const photosItems = mediaItems.filter((item) =>
     item.type?.toLowerCase().includes("photo")
   );
+
+  // console.log(document.getElementById("gallerySearch"));
+
+  setupSearch("gallerySearch", galleryGrid, photosItems, createCard, ["title"]);
 
   // console.log(photosItems);
 
@@ -41,6 +44,8 @@ export async function renderVideoItem() {
   const videoItems = mediaItems.filter((item) =>
     item.type?.toLowerCase().includes("video")
   );
+
+  setupSearch("gallerySearch", videoGrid, videoItems, createCard, ["title"]);
 
   // console.log(videoItems);
 

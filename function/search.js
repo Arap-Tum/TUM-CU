@@ -1,29 +1,31 @@
-function setupSearch() {
-  InputId, gridElement, dataItems, createCardFn, (searchField = ["title"]);
-}
-{
+export function setupSearch(
+  inputId,
+  gridElement,
+  dataItems,
+  createCardFn,
+  searchFields = ["title"]
+) {
   const inputElement = document.getElementById(inputId);
 
   if (!inputElement) {
-    console.error(`Input with ID "${inputId}" not found`);
+    console.error(`Input with ID "${inputId}" not found.`);
     return;
   }
 
   function initializeSearch(items) {
-    const searchTerm = inputElement.value.toLocaleLowerCase();
-
+    const searchTerm = inputElement.value.toLowerCase();
     if (!searchTerm) return items;
 
     return items.filter((item) =>
-      searchTerm.some((field) =>
-        (item[field] || "").toLocaleLowerCase().includes(searchTerm)
+      searchFields.some((field) =>
+        (item[field] || "").toLowerCase().includes(searchTerm)
       )
     );
   }
 
   inputElement.addEventListener("input", () => {
-    const filterdItems = initializeSearch(dataItems);
-    const cardsHTML = filterdItems.map((item) => createCardFn(item)).join("");
+    const filteredItems = initializeSearch(dataItems);
+    const cardsHTML = filteredItems.map((item) => createCardFn(item)).join("");
     gridElement.innerHTML = cardsHTML;
   });
 }
