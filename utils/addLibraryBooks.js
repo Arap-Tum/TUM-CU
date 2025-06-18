@@ -56,11 +56,12 @@ export class LibraryApp {
   async loadBooks() {
     try {
       this.books = await BookAPI.getAllBooks();
+
       this.filteredBooks = [...this.books];
       this.displayBooks();
       //   testing
-      //   console.log(this.books);
-      //   console.log(this.filteredBooks);
+      // console.log(this.books);
+      // console.log(this.filteredBooks);
     } catch (error) {
       console.error("Error loading books:", error);
       this.showNoResults();
@@ -105,9 +106,7 @@ export class LibraryApp {
     card.className = "book-card";
     card.innerHTML = `
         <div class="book-cover">
-                        <img src="${book.coverUrl}" alt="${
-      book.title
-    }" loading="lazy" 
+                        <img src="${book.cover}" alt="${book.title}" loading="lazy" 
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                         <div class="book-placeholder" style="display: none;">📚</div>
                     </div>
@@ -115,12 +114,7 @@ export class LibraryApp {
                         <h3 class="book-title">${book.title}</h3>
                         <p class="book-author">by ${book.author}</p>
                         <span class="book-category">${book.category}</span>
-                        <div class="book-rating">
-                            <div class="stars">
-                                ${this.generateStars(book.rating)}
-                            </div>
-                            <span class="rating-text">${book.rating}</span>
-                        </div>
+                      
                         <p class="book-description">${book.description}</p>
                     </div>
     `;

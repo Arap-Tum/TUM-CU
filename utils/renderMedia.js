@@ -1,16 +1,26 @@
-import { mediaItems } from "../data/mediaData.js";
+// import { mediaItems } from "../data/mediaData.js";
 
-export function renderPhotos() {
+import { fetchMediaItems } from "../API/allApi.js";
+
+let mediaItems = [];
+
+export async function renderPhotos() {
   const galleryGrid = document.getElementById("galleryGrid");
 
   galleryGrid.innerHTML = "";
 
+  mediaItems = await fetchMediaItems();
+
+  // console.log(mediaItems);
+  // console.log(mediaItems[0]);
+
   // filter only photo item
-  const photosItems = mediaItems.filter(
-    (mediaItems) => mediaItems.type === "photos"
+  const photosItems = mediaItems.filter((item) =>
+    item.type?.toLowerCase().includes("photo")
   );
 
-  console.log(photosItems);
+  // console.log(photosItems);
+
   if (photosItems.length === 0) {
     galleryGrid.innerHTML = `<div class="loading">No Photos available at the moment.</div>`;
     return;
@@ -21,27 +31,35 @@ export function renderPhotos() {
 }
 
 // Render videos
-export function renderVideoItem() {
+export async function renderVideoItem() {
   const videoGrid = document.getElementById("videoGrid");
   videoGrid.innerHTML = "";
+  console.log(videoGrid);
 
-  const videoItems = mediaItems.filter((item) => item.type === "video");
+  mediaItems = mediaItems = await fetchMediaItems();
+
+  const videoItems = mediaItems.filter((item) =>
+    item.type?.toLowerCase().includes("video")
+  );
+
+  // console.log(videoItems);
+
   if (videoItems.length === 0) {
-    galleryGrid.innerHTML = `<div class="loading">No videos available at the moment.</div>`;
+    videoGrid.innerHTML = `<div class="loading">No videos available at the moment.</div>`;
     return;
   }
-
-  console.log(videoItems);
 
   const cardsHTML = videoItems.map((videoItem) => createCard(videoItem));
   videoGrid.innerHTML = cardsHTML.join("");
 }
 
 // HOMPAGE MEDEA ITEM
-export function renderHomeMedia() {
+export async function renderHomeMedia() {
   const homeMediaGrid = document.getElementById("mediaGrid");
 
   homeMediaGrid.innerHTML = "";
+
+  mediaItems = mediaItems = await fetchMediaItems();
 
   const sortedMediaItem = mediaItems.sort((a, b) => {
     const getComparbleId = (item) => {

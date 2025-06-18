@@ -1,6 +1,6 @@
 // import { mockLeadersData } from "../data/leadersData.js";
 
-import { fetchLeaders } from "../API/allApi.js";
+import { fetchFormerLeaders } from "../API/allApi.js";
 // Simulate API call with loading delay
 // async function fetchLeaders() {
 //   return new Promise((resolve) => {
@@ -11,9 +11,9 @@ import { fetchLeaders } from "../API/allApi.js";
 // }
 
 // Load and display leaders
-export async function loadLeaders() {
+export async function loadFomerLeaders() {
   try {
-    const leaders = await fetchLeaders();
+    const leaders = await fetchFormerLeaders();
     console.log(leaders);
     const loadingContainer = document.getElementById("loadingContainer");
     const leadersContainer = document.getElementById("leadersGrid");
