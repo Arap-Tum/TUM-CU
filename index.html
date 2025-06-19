@@ -37,54 +37,65 @@
   <div id="regModal" class="reg-modal">
     <div class="modal-content">
       <h3 id="modalTitle">Register</h3>
-      <form id="regForm">
-        <div class="form-group">
-          <label for="noteTitle">Full Name</label>
-          <input type="text" id="noteTitle" required />
+      <form id="memberForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Full Name *</label>
+            <input type="text" id="memberName" name="name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Registration Number *</label>
+            <input type="text" id="memberReg" name="reg" class="form-input">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" id="memberPhone" name="phone" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Course of Study *</label>
+            <input type="text" id="memberCourse" name="course" class="form-input"
+              placeholder="Bachelor of Information Science">
+          </div>
         </div>
         <div class="form-group">
-          <label for="noteTitle">Reg Number</label>
-          <input type="text" id="noteTitle" placeholder="BCOM/327J/2021" />
+          <label class="form-label">Place of Residence *</label>
+          <input type="text" id="memberResidence" name="residence" class="form-input"
+            placeholder="Hostels, Kisauni, Kaa Chonjo..... ">
         </div>
         <div class="form-group">
-          <label for="noteTitle">Phone Number</label>
-          <input type="text" id="noteTitle" placeholder="0712347556" required />
-        </div>
-        <div class="form-group">
-          <label for="noteTitle">Course</label>
-          <input type="text" id="noteTitle" placeholder="Bachelor of Information Science" />
-        </div>
-        <div class="form-group">
-          <label for="noteTitle">Place of Residence</label>
-          <input type="text" id="noteTitle" placeholder="Hostels, Kisauni, Kaa Chonjo..... " />
-        </div>
-        <div class="form-group">
-          <label for="noteCategory">Ministry</label>
-          <select id="noteCategory">
-            <option value="Todo">Intecessory</option>
-            <option value="Todo">Praise and Worship</option>
-            <option value="Todo">Instrumentalist</option>
-            <option value="Work">Ushering</option>
-            <option value="Work">Catering</option>
-            <option value="Todo">Hospital</option>
-            <option value="Todo">High school</option>
-            <option value="Todo">Media</option>
-            <option value="Ideas">Creative</option>
-            <option value="Ideas">Technician</option>
-            <option value="Personal">I don't belong to any ministry</option>
+          <label class="form-label">Ministry *</label>
+          <select id="memberMinistry" class="form-select" name="ministry">
+            <option value="">Select Ministry</option>
+            <option value="Intercessory">Intercessory</option>
+            <option value="Praise and Worship">Praise and Worship</option>
+            <option value="Instrumentalist">Instrumentalist</option>
+            <option value="Ushering">Ushering</option>
+            <option value="Catering">Catering</option>
+            <option value="Hospital">Hospital</option>
+            <option value="High school">High school</option>
+            <option value="Media">Media</option>
+            <option value="Creative">Creative</option>
+            <option value="Technician">Technician</option>
+            <option value="I don't belong to any ministry">I don't belong to any ministry</option>
           </select>
         </div>
-        <div class="modal-actions">
-          <button type="button" class="cta-button btn-secondary" id="closeModal">
-            Cancel
-          </button>
-          <button type="button" class="cta-button btn-primary" id="save">
-            Save
-          </button>
+        <div class="form-group">
+          <p style="color: green; font-size: larger;" class="success-message"></p>
+          <p style="color: brown; font-size: larger;" class=" failed-message"></p>
+
+        </div>
+        <div style="text-align: right; margin-top: 30px;">
+          <button type="button" class="cta-button btn-secondary" id="closeModal"
+            style="margin-right: 10px;">Cancel</button>
+          <button type="submit" class="cta-button btn-primary" id="submitBtn">Save</button>
         </div>
       </form>
     </div>
   </div>
+
+
 
   <section class="second-section">
     <!-- About card -->

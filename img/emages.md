@@ -12,3 +12,8 @@ https://i.ibb.co/dJHj5HhP/prayer-bg.jpg
 <!-- Logo -->
 
 https://i.ibb.co/HTk9RYNB/CU-logo.png
+
+<!-- ministry  -->
+
+https://i.ibb.co/0yc8dbkc/media-Ministry.jpg
+https://i.ibb.co/HfCr7yYR/ushering-Ministry.jpg

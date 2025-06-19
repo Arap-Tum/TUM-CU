@@ -22,3 +22,21 @@ export const fetchMediaItems = () => fetchData("media");
 export const fetchLibraryItems = () => fetchData("books");
 export const fetchLeaders = () => fetchData("leaders");
 export const fetchFormerLeaders = () => fetchData("formerLeaders");
+
+// A Generic post function
+
+async function createData(endpoint, formData) {
+  const response = await fetch(`${baseUrl}/api/${endpoint}`, {
+    method: "POST",
+    body: formData,
+  });
+
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message || "fAILED TO UPLOAD  DATA");
+  }
+
+  return await response.json();
+}
+
+export const createMember = (formData) => createData("members", formData);
