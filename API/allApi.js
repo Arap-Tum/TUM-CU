@@ -51,7 +51,7 @@ export async function sendRequest(formData) {
   });
 
   if (!res.ok) {
-    const error = await response.json();
+    const error = await res.json();
     throw new Error(error.message || "fAILED TO UPLOAD  DATA");
   }
 
