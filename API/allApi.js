@@ -40,3 +40,20 @@ async function createData(endpoint, formData) {
 }
 
 export const createMember = (formData) => createData("members", formData);
+
+export async function sendRequest(formData) {
+  const res = await fetch(`${baseUrl}/api/requests`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  });
+
+  if (!res.ok) {
+    const error = await response.json();
+    throw new Error(error.message || "fAILED TO UPLOAD  DATA");
+  }
+
+  return await res.json();
+}
