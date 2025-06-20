@@ -20,8 +20,7 @@ export const ministries = [
     name: "Worship Ministry",
     description:
       "Leading the congregation in heartfelt worship through music, creating an atmosphere where hearts connect with God and His presence is welcomed.",
-    image:
-      "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=200&fit=crop&auto=format",
+    image: "https://i.ibb.co/Q7hprSNZ/ministries.jpg",
     responsibilities: [
       "Sunday worship leading",
       "Choir coordination",
@@ -35,7 +34,7 @@ export const ministries = [
     name: "Intercessory Ministry",
     description:
       "Fostering a culture of prayer within our community, providing spiritual support, and interceding for the needs of our congregation and beyond.",
-    image: "",
+    image: "https://i.ibb.co/kgcm4mKz/praying.jpg",
     responsibilities: [
       "Prayer meetings",
       "Intercessory prayer",
@@ -51,7 +50,7 @@ export const ministries = [
     name: "Hospital Ministry",
     description:
       "Extending Christ's love beyond our walls through practical service, evangelism, and community development programs that make a lasting impact.",
-    image: "",
+    image: "https://i.ibb.co/MD35xbJX/hospital.jpg",
     responsibilities: [
       "Hospital Visit",
       "Evangelism programs",
@@ -87,7 +86,7 @@ export const ministries = [
     name: "Creative Ministry",
     description:
       " Ministering using our God-given talents, to brings ideas to life through art, design, and innovation all for the glory of God and to uplift the church experience.",
-    image: "",
+    image: "https://i.ibb.co/zV4PKJbQ/creative.jpg",
     responsibilities: [
       "Dancing",
       "Acting",
@@ -105,7 +104,7 @@ export const ministries = [
     name: "Instrumentalist Ministry",
     description:
       "Using the power of sound with skilled hands and passionate hearts to bring worship to life,playing every note with passion to glorify God and lead the church in praise.",
-    image: "",
+    image: "https://i.ibb.co/WN7tVq8H/instrument.jpg",
     responsibilities: [
       "instrument playing",
       "Venue Set Ups",
