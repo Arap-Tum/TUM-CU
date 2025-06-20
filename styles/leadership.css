@@ -47,8 +47,8 @@
   box-shadow: var(--card-hover-shadow);
 }
 .leader-photo {
-  width: 120px;
-  height: 180px;
+  width: 90%;
+  height: 70%;
   border-radius: 12px;
   object-fit: cover;
   margin: 0 auto var(--spacing-md);
@@ -150,8 +150,8 @@
   }
 
   .leader-photo {
-    width: 100px;
-    height: 150px;
+    width: 90%;
+    height: 70%;
   }
 }
 
