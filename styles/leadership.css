@@ -132,10 +132,6 @@
 }
 
 @media (max-width: 768px) {
-  body {
-    padding: var(--spacing-md) var(--spacing-sm);
-  }
-
   .page-title h1 {
     font-size: 2rem;
   }
